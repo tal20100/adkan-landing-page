@@ -2,6 +2,7 @@
 
 import { useLang } from "@/lib/LangContext";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   const { lang, t } = useLang();
@@ -16,28 +17,15 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-sm text-muted">
-            <a
-              href="https://taltalhayun.com/adkan/privacy"
-              className="hover:text-foreground transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/legal/privacy" className="hover:text-foreground transition-colors">
               {t.footer.links.privacy}
-            </a>
-            <a
-              href="https://taltalhayun.com/adkan/terms"
-              className="hover:text-foreground transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            </Link>
+            <Link href="/legal/terms" className="hover:text-foreground transition-colors">
               {t.footer.links.terms}
-            </a>
-            <a
-              href="mailto:tal.hayun2010@gmail.com"
-              className="hover:text-foreground transition-colors"
-            >
+            </Link>
+            <Link href="/legal/contact" className="hover:text-foreground transition-colors">
               {t.footer.links.contact}
-            </a>
+            </Link>
           </div>
         </div>
 
