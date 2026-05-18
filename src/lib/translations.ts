@@ -55,7 +55,7 @@ export const translations = {
         {
           title: "לוח סטריקים",
           description:
-            "כמו GitHub Contributions — כל יום ירוק הוא יום שניצחתם. אל תשברו את הרצף.",
+            "כל יום ירוק הוא יום שניצחתם. אל תשברו את הרצף.",
           icon: "calendar",
           premium: false,
         },
@@ -69,7 +69,7 @@ export const translations = {
         {
           title: "המוח שלכם",
           description:
-            "מסקוט שמגיב לשימוש שלכם — שמח כשאתם מצטיינים, נבהל כשאתם מגזימים.",
+            "המוח שלכם משתנה לפי השימוש — שמח כשאתם מצטיינים, נבהל כשאתם מגזימים.",
           icon: "brain",
           premium: false,
         },
@@ -94,10 +94,10 @@ export const translations = {
       subtitle: "הוא משתנה לפי השימוש שלכם. כל יום.",
       states: [
         { label: "מצטיין", emoji: "🤩", description: "מתחת ל-50% מהיעד", color: "green" },
-        { label: "בכיוון", emoji: "😊", description: "50-100% מהיעד", color: "green-light" },
-        { label: "מחליק", emoji: "😰", description: "100-150% מהיעד", color: "warning" },
-        { label: "אזהרה", emoji: "😫", description: "150-200% מהיעד", color: "danger" },
-        { label: "ספירלה", emoji: "🤯", description: "מעל 200% מהיעד", color: "danger" },
+        { label: "בכיוון טוב", emoji: "😊", description: "50-100% מהיעד", color: "green-light" },
+        { label: "מתקרב למגבלה", emoji: "😰", description: "100-150% מהיעד", color: "warning" },
+        { label: "זה הזמן לעצור", emoji: "😫", description: "150-200% מהיעד", color: "danger" },
+        { label: "הגזמנו להיום", emoji: "🤯", description: "מעל 200% מהיעד", color: "danger" },
       ],
     },
     blocking: {
@@ -146,7 +146,7 @@ export const translations = {
           "3 קבוצות עד 3 חברים",
           "לוח תוצאות יומי",
           "לוח סטריקים",
-          "מסקוט המוח",
+          "מוח אינטראקטיבי",
           "חסימה בסיסית",
           "ווידג׳ט למסך הבית",
         ],
@@ -258,7 +258,7 @@ export const translations = {
         {
           title: "Streak Calendar",
           description:
-            "Like GitHub Contributions — every green day is a day you won. Don't break the streak.",
+            "Every green day is a day you won. Don't break the streak.",
           icon: "calendar",
           premium: false,
         },
@@ -272,7 +272,7 @@ export const translations = {
         {
           title: "Your Brain",
           description:
-            "A mascot that reacts to your usage — happy when you're crushing it, panicking when you're not.",
+            "Your brain reacts to your usage — happy when you're crushing it, panicking when you're not.",
           icon: "brain",
           premium: false,
         },
@@ -349,7 +349,7 @@ export const translations = {
           "3 groups of up to 3 friends",
           "Daily leaderboard",
           "Streak calendar",
-          "Brain mascot",
+          "Interactive brain",
           "Basic blocking",
           "Home screen widget",
         ],
