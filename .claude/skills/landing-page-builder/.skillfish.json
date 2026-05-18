@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "landing-page-builder",
+  "owner": "majesticlabs-dev",
+  "repo": "majestic-marketplace",
+  "path": "plugins/majestic-marketing/skills/landing-page-builder",
+  "branch": "master",
+  "sha": "12188da4ced322a64493b9b31d9ebfcf8cd051a8",
+  "source": "manual"
+}
