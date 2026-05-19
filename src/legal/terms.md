@@ -35,7 +35,7 @@ title: תנאי שימוש | Terms of Service
 
 ## 5. תשלומים ומנוי
 
-- מנוי חודשי: ₪5.90/חודש
+- מנוי חודשי: ₪7.90/חודש
 - מנוי שנתי: ₪59.90/שנה
 - רישיון לכל החיים: ₪99.90 חד-פעמי
 - כל שלושת המנויים כוללים תקופת ניסיון של 3 ימים ללא חיוב
@@ -105,7 +105,7 @@ Not permitted:
 
 ## 5. Payments and Subscriptions
 
-- Monthly: ₪5.90/month
+- Monthly: ₪7.90/month
 - Annual: ₪59.90/year
 - Lifetime: ₪99.90 one-time
 - All plans include a 3-day free trial

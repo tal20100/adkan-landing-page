@@ -37,7 +37,7 @@ const icons: Record<string, React.ReactNode> = {
 };
 
 export function Features() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
     <section id="features" className="relative py-24 sm:py-32 px-4">
@@ -72,6 +72,11 @@ export function Features() {
               {feature.premium && (
                 <span className="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full premium-badge text-white">
                   Premium
+                </span>
+              )}
+              {("comingSoon" in feature) && (
+                <span className="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-500 border border-amber-500/30">
+                  {lang === "he" ? "בקרוב" : "Soon"}
                 </span>
               )}
               <div

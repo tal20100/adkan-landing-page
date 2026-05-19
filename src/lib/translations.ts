@@ -86,6 +86,7 @@ export const translations = {
             "כל שבוע אתגר חדש עם הקבוצות שלכם. מי יסיים ראשון?",
           icon: "rocket",
           premium: true,
+          comingSoon: true,
         },
       ],
     },
@@ -154,7 +155,7 @@ export const translations = {
       },
       premium: {
         name: "פרימיום",
-        price: "₪5.90",
+        price: "₪7.90",
         period: "לחודש",
         badge: "3 ימי ניסיון חינם",
         annual: "₪59.90/שנה — חסכו 15%",
@@ -289,6 +290,7 @@ export const translations = {
             "New themed challenge every week with your groups. Who finishes first?",
           icon: "rocket",
           premium: true,
+          comingSoon: true,
         },
       ],
     },
@@ -357,7 +359,7 @@ export const translations = {
       },
       premium: {
         name: "Premium",
-        price: "₪5.90",
+        price: "₪7.90",
         period: "/month",
         badge: "3-day free trial",
         annual: "₪59.90/year — save 15%",
