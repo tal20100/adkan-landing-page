@@ -66,39 +66,45 @@ export function Hero() {
           <span className="text-sm text-muted">{t.hero.ctaSub}</span>
         </motion.div>
 
-        {/* Phone mockup with real screenshot */}
+        {/* Two-phone hero */}
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 relative mx-auto max-w-xs"
+          className="mt-16 relative mx-auto flex items-end justify-center gap-4 h-[520px]"
         >
-          {/* Mascot peeking */}
+          {/* Back phone — leaderboard, slightly smaller + rotated */}
           <motion.div
-            className="absolute -top-10 -left-6 sm:-left-16 z-20"
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="relative w-[200px] shrink-0 rounded-[2.5rem] border-2 border-border overflow-hidden self-center translate-y-6 -rotate-3 opacity-80"
+            initial={{ x: 40, opacity: 0 }}
+            animate={{ x: 0, opacity: 0.85 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
           >
             <Image
-              src="/logo.png"
-              alt={lang === "he" ? "המוח של עד כאן" : "AdKan Brain Mascot"}
-              width={80}
-              height={80}
-              className="rounded-2xl drop-shadow-2xl"
+              src="/site2.jpeg"
+              alt={lang === "he" ? "לוח תוצאות" : "Leaderboard"}
+              width={200}
+              height={370}
+              className="w-full h-auto"
             />
           </motion.div>
 
-          <div className="relative mx-auto w-[260px] rounded-[3rem] border-2 border-border bg-surface overflow-hidden glow-green">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[30px] bg-background rounded-b-2xl z-10" />
+          {/* Main phone — home screen, larger + front */}
+          <motion.div
+            className="relative w-[240px] shrink-0 rounded-[3rem] border-2 border-green/40 overflow-hidden z-10 glow-green"
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
             <Image
-              src="/site3.jpeg"
+              src="/screenshotmain.jpeg"
               alt={lang === "he" ? "מסך הבית של עד כאן" : "AdKan home screen"}
-              width={260}
-              height={530}
+              width={240}
+              height={490}
               className="w-full h-auto"
               priority
             />
-          </div>
+          </motion.div>
+
           <div className="absolute -inset-4 bg-gradient-to-b from-green/8 to-purple/8 rounded-[3.5rem] blur-2xl -z-10" />
         </motion.div>
       </div>
