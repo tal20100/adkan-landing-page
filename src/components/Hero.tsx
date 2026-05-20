@@ -66,7 +66,7 @@ export function Hero() {
           <span className="text-sm text-muted">{t.hero.ctaSub}</span>
         </motion.div>
 
-        {/* Phone mockup with mascot */}
+        {/* Phone mockup with real screenshot */}
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -88,56 +88,16 @@ export function Hero() {
             />
           </motion.div>
 
-          <div className="relative mx-auto w-[260px] h-[530px] rounded-[3rem] border-2 border-border bg-surface overflow-hidden glow-green">
+          <div className="relative mx-auto w-[260px] rounded-[3rem] border-2 border-border bg-surface overflow-hidden glow-green">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[30px] bg-background rounded-b-2xl z-10" />
-            <div className="p-6 pt-12 h-full flex flex-col">
-              <div className="text-center mb-6">
-                <div className="text-xs text-muted mb-1">{lang === "he" ? "היום" : "Today"}</div>
-                <div className="text-4xl font-display font-black gradient-text-green">1:23</div>
-                <div className="text-xs text-green mt-1">↓ 34% {lang === "he" ? "מאתמול" : "vs yesterday"}</div>
-              </div>
-              {/* Mini leaderboard */}
-              <div className="flex-1 space-y-2">
-                {(lang === "he"
-                  ? ["נועה", "איתי", "שירה", "אתם"]
-                  : ["Noa", "Itay", "Shira", "You"]
-                ).map((name, i) => (
-                  <div
-                    key={name}
-                    className={`flex items-center justify-between px-3 py-2.5 rounded-xl ${
-                      i === 3
-                        ? "bg-green/10 border border-green/20"
-                        : "bg-surface-hover"
-                    }`}
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className={`text-xs font-bold w-4 ${i === 0 ? "text-yellow-400" : "text-muted"}`}>
-                        {i + 1}
-                      </span>
-                      <span className="text-sm font-medium">{name}</span>
-                    </div>
-                    <span className="text-xs text-muted">
-                      {["47m", "1:12", "1:34", "—"][i]}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              {/* Streak row */}
-              <div className="mt-4 flex justify-center gap-1.5">
-                {Array.from({ length: 7 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={`w-5 h-5 rounded-[5px] ${
-                      i < 5
-                        ? i < 3
-                          ? "bg-green/70"
-                          : "bg-green/40"
-                        : "bg-border"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+            <Image
+              src="/site3.jpeg"
+              alt={lang === "he" ? "מסך הבית של עד כאן" : "AdKan home screen"}
+              width={260}
+              height={530}
+              className="w-full h-auto"
+              priority
+            />
           </div>
           <div className="absolute -inset-4 bg-gradient-to-b from-green/8 to-purple/8 rounded-[3.5rem] blur-2xl -z-10" />
         </motion.div>
