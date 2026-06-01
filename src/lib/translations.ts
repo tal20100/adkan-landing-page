@@ -9,7 +9,7 @@ export const translations = {
       faq: "שאלות",
     },
     hero: {
-      badge: "בקרוב ב-App Store",
+      badge: "זמין עכשיו ב-App Store",
       headline: "עד כאן.",
       subheadline: "הזמן שלך, בשליטה שלך.",
       description:
@@ -86,7 +86,6 @@ export const translations = {
             "כל שבוע אתגר חדש עם הקבוצות שלכם. מי יסיים ראשון?",
           icon: "rocket",
           premium: true,
-          comingSoon: true,
         },
       ],
     },
@@ -213,7 +212,7 @@ export const translations = {
       faq: "FAQ",
     },
     hero: {
-      badge: "Coming Soon to App Store",
+      badge: "Now on App Store",
       headline: "Enough.",
       subheadline: "Your time. Your control.",
       description:
@@ -290,7 +289,6 @@ export const translations = {
             "New themed challenge every week with your groups. Who finishes first?",
           icon: "rocket",
           premium: true,
-          comingSoon: true,
         },
       ],
     },

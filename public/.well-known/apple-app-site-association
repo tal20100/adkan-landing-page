@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["STJA5GH4Y9.com.talhayun.AdKan"],
+        "components": [
+          {
+            "/": "/join*",
+            "comment": "Group invite deep links"
+          }
+        ]
+      }
+    ]
+  }
+}
