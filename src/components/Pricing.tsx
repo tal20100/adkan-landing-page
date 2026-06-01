@@ -54,7 +54,7 @@ export function Pricing() {
             </ul>
 
             <a
-              href="#"
+              href="https://apps.apple.com/il/app/adkan/id6768065458"
               className="block text-center py-3.5 px-6 rounded-xl border border-border text-foreground font-semibold hover:bg-surface-hover transition-colors"
             >
               {t.pricing.free.cta}
@@ -104,7 +104,7 @@ export function Pricing() {
             </ul>
 
             <a
-              href="#"
+              href="https://apps.apple.com/il/app/adkan/id6768065458"
               className="block text-center py-3.5 px-6 rounded-xl bg-gradient-to-r from-green to-green-dim text-white font-bold hover:scale-[1.02] transition-transform"
             >
               {t.pricing.premium.cta}

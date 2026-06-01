@@ -57,7 +57,7 @@ export function Hero() {
           className="flex flex-col items-center gap-3"
         >
           <a
-            href="#"
+            href="https://apps.apple.com/il/app/adkan/id6768065458"
             className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-green to-green-dim text-white font-bold text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(120,201,111,0.3)]"
           >
             <AppleLogo />
