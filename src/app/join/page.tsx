@@ -15,8 +15,9 @@ interface Props {
 }
 
 export default async function JoinPage({ searchParams }: Props) {
-  const { group } = await searchParams
-  const appSchemeUrl = group ? `adkan://join?group=${group}` : 'adkan://'
+  const params = await searchParams
+  const group = typeof params.group === 'string' ? params.group : null
+  const appSchemeUrl = group ? `adkan://join?group=${group}` : null
 
   return (
     <main
@@ -97,7 +98,7 @@ export default async function JoinPage({ searchParams }: Props) {
           </p>
 
           {/* Primary — open in app */}
-          <a
+          {appSchemeUrl && <a
             href={appSchemeUrl}
             style={{
               display: 'block',
@@ -114,7 +115,7 @@ export default async function JoinPage({ searchParams }: Props) {
             }}
           >
             פתח ב-עד כאן / Open in AdKan
-          </a>
+          </a>}
 
           {/* Secondary — App Store */}
           <a
