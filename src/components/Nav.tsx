@@ -17,7 +17,7 @@ export function Nav() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
-          <Image src="/logo.png" alt="AdKan" width={36} height={36} className="rounded-xl" />
+          <Image src="/logo.svg" alt="AdKan" width={36} height={36} className="rounded-xl" />
           <span className="font-display font-bold text-lg">
             {lang === "he" ? "עד כאן" : "AdKan"}
           </span>
