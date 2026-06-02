@@ -14,14 +14,25 @@ const rubik = Rubik({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
+const BASE_URL = "https://adkan-landing-page-tal.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: "עד כאן — הזמן שלך, בשליטה שלך",
   description:
     "עד כאן הופך את הקרב על זמן המסך לתחרות חברתית. תתחרו עם חברים, תעקבו אחרי השימוש, תנצחו בחזרה את הזמן שלכם.",
+  keywords: [
+    "עד כאן", "AdKan", "אפליקציית עד כאן", "זמן מסך", "screen time", "בריאות דיגיטלית",
+    "digital wellbeing", "הגבלת מסך", "תחרות חברתית", "iOS", "אייפון",
+    "ניהול זמן", "גמילה מהטלפון", "פוקוס",
+  ],
+  alternates: { canonical: BASE_URL },
+  verification: { google: "SukPPcADkl0eIW29o39TXqLWlrv9J85_3HBzEaHwKjM" },
   openGraph: {
     title: "עד כאן — הזמן שלך, בשליטה שלך",
     description:
       "עד כאן הופך את הקרב על זמן המסך לתחרות חברתית. תתחרו עם חברים, תעקבו אחרי השימוש, תנצחו בחזרה את הזמן שלכם.",
+    url: BASE_URL,
     locale: "he_IL",
     type: "website",
     siteName: "עד כאן | AdKan",

@@ -45,7 +45,7 @@ export function Leaderboard() {
         >
           <div className="rounded-[3rem] border-2 border-border overflow-hidden glow-purple">
             <Image
-              src="/site2.jpeg"
+              src="/leaderboard.jpeg"
               alt={t.leaderboard.groupName}
               width={400}
               height={740}

@@ -66,42 +66,80 @@ export function Hero() {
           <span className="text-sm text-muted">{t.hero.ctaSub}</span>
         </motion.div>
 
-        {/* Two-phone hero */}
+        {/* Three-phone hero */}
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 relative mx-auto flex items-end justify-center gap-4 h-[520px]"
+          className="mt-16 relative mx-auto flex items-end justify-center gap-3 h-[580px]"
         >
-          {/* Back phone — leaderboard, slightly smaller + rotated */}
+          {/* Floating notification — drops in from top */}
           <motion.div
-            className="relative w-[200px] shrink-0 rounded-[2.5rem] border-2 border-border overflow-hidden self-center translate-y-6 -rotate-3 opacity-80"
-            initial={{ x: 40, opacity: 0 }}
-            animate={{ x: 0, opacity: 0.85 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
+            className="absolute top-0 left-1/2 -translate-x-1/2 z-20 w-[280px] sm:w-[320px]"
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
+          >
+            <motion.div
+              animate={{ y: [0, -4, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+            >
+              <Image
+                src="/notification.png"
+                alt={lang === "he" ? "התראת עד כאן" : "AdKan notification"}
+                width={320}
+                height={80}
+                className="w-full h-auto"
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Left phone — focus session */}
+          <motion.div
+            className="relative w-[155px] sm:w-[175px] shrink-0 rounded-[2.5rem] border-2 border-border overflow-hidden self-center translate-y-10 -rotate-6 opacity-70"
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 0.75 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
           >
             <Image
-              src="/site2.jpeg"
-              alt={lang === "he" ? "לוח תוצאות" : "Leaderboard"}
-              width={200}
-              height={370}
+              src="/focus.jpeg"
+              alt={lang === "he" ? "סשן פוקוס" : "Focus session"}
+              width={175}
+              height={360}
               className="w-full h-auto"
             />
           </motion.div>
 
-          {/* Main phone — home screen, larger + front */}
+          {/* Center phone — main screen (front, largest) */}
           <motion.div
-            className="relative w-[240px] shrink-0 rounded-[3rem] border-2 border-green/40 overflow-hidden z-10 glow-green"
+            className="relative w-[230px] sm:w-[260px] shrink-0 rounded-[3rem] border-2 border-green/40 overflow-hidden z-10 glow-green"
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
             <Image
-              src="/screenshotmain.jpeg"
+              src="/home.jpeg"
               alt={lang === "he" ? "מסך הבית של עד כאן" : "AdKan home screen"}
-              width={240}
-              height={490}
+              width={260}
+              height={533}
               className="w-full h-auto"
               priority
+            />
+          </motion.div>
+
+          {/* Right phone — leaderboard */}
+          <motion.div
+            className="relative w-[155px] sm:w-[175px] shrink-0 rounded-[2.5rem] border-2 border-border overflow-hidden self-center translate-y-10 rotate-6 opacity-70"
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 0.75 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+          >
+            <Image
+              src="/leaderboard.jpeg"
+              alt={lang === "he" ? "לוח תוצאות" : "Leaderboard"}
+              width={175}
+              height={360}
+              className="w-full h-auto"
             />
           </motion.div>
 
