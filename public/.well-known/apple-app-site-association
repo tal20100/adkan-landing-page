@@ -8,6 +8,10 @@
           {
             "/": "/join*",
             "comment": "Group invite deep links"
+          },
+          {
+            "/": "/friend*",
+            "comment": "Friend invite deep links"
           }
         ]
       }
