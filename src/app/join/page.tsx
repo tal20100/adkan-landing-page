@@ -140,6 +140,23 @@ export default async function JoinPage({ searchParams }: Props) {
             <AppleLogo />
             הורד את עד כאן / Download AdKan
           </a>
+
+          <p
+            dir="rtl"
+            style={{
+              fontSize: '0.85rem',
+              color: '#8888aa',
+              maxWidth: '22rem',
+              lineHeight: 1.5,
+              margin: '1rem 0 0',
+            }}
+          >
+            אחרי ההתקנה, חזרו להודעה הזו ולחצו שוב על הקישור — האפליקציה תיפתח ותתחברו אוטומטית.
+            <br />
+            <span dir="ltr" style={{ color: '#6a6a8a' }}>
+              After installing, come back to this message and tap the link again — the app will open and connect you automatically.
+            </span>
+          </p>
         </>
       ) : (
         <>
