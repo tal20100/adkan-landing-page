@@ -3,7 +3,18 @@
     "allow": [
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(cp \"C:\\\\Users\\\\Tal\\\\OneDrive\\\\Documents\\\\Studying\\\\code\\\\git-repos\\\\AdKan-Landing-Page\\\\.claude\\\\screenshots-and-images\\\\site1.jpeg\" \"C:\\\\Users\\\\Tal\\\\OneDrive\\\\Documents\\\\Studying\\\\code\\\\git-repos\\\\AdKan-Landing-Page\\\\public\\\\site1.jpeg\")",
+      "Bash(cp \"C:\\\\Users\\\\Tal\\\\OneDrive\\\\Documents\\\\Studying\\\\code\\\\git-repos\\\\AdKan-Landing-Page\\\\.claude\\\\screenshots-and-images\\\\site2.jpeg\" \"C:\\\\Users\\\\Tal\\\\OneDrive\\\\Documents\\\\Studying\\\\code\\\\git-repos\\\\AdKan-Landing-Page\\\\public\\\\site2.jpeg\")",
+      "Bash(cp \"C:\\\\Users\\\\Tal\\\\OneDrive\\\\Documents\\\\Studying\\\\code\\\\git-repos\\\\AdKan-Landing-Page\\\\.claude\\\\screenshots-and-images\\\\site3.jpeg\" \"C:\\\\Users\\\\Tal\\\\OneDrive\\\\Documents\\\\Studying\\\\code\\\\git-repos\\\\AdKan-Landing-Page\\\\public\\\\site3.jpeg\")",
+      "Bash(cp \"C:\\\\Users\\\\Tal\\\\OneDrive\\\\Documents\\\\Studying\\\\code\\\\git-repos\\\\AdKan-Landing-Page\\\\.claude\\\\screenshots-and-images\\\\appstore.png\" \"C:\\\\Users\\\\Tal\\\\OneDrive\\\\Documents\\\\Studying\\\\code\\\\git-repos\\\\AdKan-Landing-Page\\\\public\\\\appstore.png\")",
+      "Bash(git commit *)",
+      "Bash(npx next *)",
+      "Bash(curl -s http://localhost:3413/friend)",
+      "Bash(kill %1)",
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(grep -B 5 -A 5 \"<!--\\\\$-->\" /tmp/android_fresh.html)"
     ]
   }
 }

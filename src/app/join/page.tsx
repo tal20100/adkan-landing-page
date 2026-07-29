@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import { headers } from 'next/headers'
+import { isAndroidUserAgent } from '@/lib/isAndroidUA'
+import AndroidAppFallback from '@/components/AndroidAppFallback'
 
 function AppleLogo() {
   return (
@@ -17,7 +20,10 @@ interface Props {
 export default async function JoinPage({ searchParams }: Props) {
   const params = await searchParams
   const group = typeof params.group === 'string' ? params.group : null
-  const appSchemeUrl = group ? `adkan://join?group=${group}` : null
+  const appSchemeUrl = group ? `adkan://join?group=${encodeURIComponent(group)}` : null
+
+  const headersList = await headers()
+  const isAndroid = isAndroidUserAgent(headersList.get('user-agent'))
 
   return (
     <main
@@ -97,25 +103,32 @@ export default async function JoinPage({ searchParams }: Props) {
             </span>
           </p>
 
-          {/* Primary — open in app */}
-          {appSchemeUrl && <a
-            href={appSchemeUrl}
-            style={{
-              display: 'block',
-              width: '100%',
-              maxWidth: '20rem',
-              padding: '1rem',
-              backgroundColor: '#26AE61',
-              color: '#ffffff',
-              borderRadius: '14px',
-              fontWeight: 700,
-              fontSize: '1.05rem',
-              textDecoration: 'none',
-              marginBottom: '0.875rem',
-            }}
-          >
-            פתח ב-עד כאן / Open in AdKan
-          </a>}
+          {/* Primary — open in app (iOS) */}
+          {appSchemeUrl && !isAndroid && (
+            <a
+              href={appSchemeUrl}
+              style={{
+                display: 'block',
+                width: '100%',
+                maxWidth: '20rem',
+                padding: '1rem',
+                backgroundColor: '#26AE61',
+                color: '#ffffff',
+                borderRadius: '14px',
+                fontWeight: 700,
+                fontSize: '1.05rem',
+                textDecoration: 'none',
+                marginBottom: '0.875rem',
+              }}
+            >
+              פתח ב-עד כאן / Open in AdKan
+            </a>
+          )}
+
+          {/* Primary — try app with fallback (Android) */}
+          {appSchemeUrl && isAndroid && (
+            <AndroidAppFallback deepLinkUrl={appSchemeUrl} />
+          )}
 
           {/* Secondary — App Store */}
           <a

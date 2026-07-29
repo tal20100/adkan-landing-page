@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import { headers } from 'next/headers'
+import { isAndroidUserAgent } from '@/lib/isAndroidUA'
+import AndroidAppFallback from '@/components/AndroidAppFallback'
 
 function AppleLogo() {
   return (
@@ -17,7 +20,10 @@ interface Props {
 export default async function FriendPage({ searchParams }: Props) {
   const params = await searchParams
   const user = typeof params.user === 'string' ? params.user : null
-  const appSchemeUrl = user ? `adkan://friend?user=${user}` : null
+  const appSchemeUrl = user ? `adkan://friend?user=${encodeURIComponent(user)}` : null
+
+  const headersList = await headers()
+  const isAndroid = isAndroidUserAgent(headersList.get('user-agent'))
 
   return (
     <main
@@ -97,24 +103,30 @@ export default async function FriendPage({ searchParams }: Props) {
             </span>
           </p>
 
-          {appSchemeUrl && <a
-            href={appSchemeUrl}
-            style={{
-              display: 'block',
-              width: '100%',
-              maxWidth: '20rem',
-              padding: '1rem',
-              backgroundColor: '#26AE61',
-              color: '#ffffff',
-              borderRadius: '14px',
-              fontWeight: 700,
-              fontSize: '1.05rem',
-              textDecoration: 'none',
-              marginBottom: '0.875rem',
-            }}
-          >
-            פתח ב-עד כאן / Open in AdKan
-          </a>}
+          {appSchemeUrl && !isAndroid && (
+            <a
+              href={appSchemeUrl}
+              style={{
+                display: 'block',
+                width: '100%',
+                maxWidth: '20rem',
+                padding: '1rem',
+                backgroundColor: '#26AE61',
+                color: '#ffffff',
+                borderRadius: '14px',
+                fontWeight: 700,
+                fontSize: '1.05rem',
+                textDecoration: 'none',
+                marginBottom: '0.875rem',
+              }}
+            >
+              פתח ב-עד כאן / Open in AdKan
+            </a>
+          )}
+
+          {appSchemeUrl && isAndroid && (
+            <AndroidAppFallback deepLinkUrl={appSchemeUrl} />
+          )}
 
           <a
             href="https://apps.apple.com/il/app/adkan/id6768065458"
