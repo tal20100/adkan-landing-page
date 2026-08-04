@@ -7,7 +7,7 @@ export default function TermsPage() {
         → חזרה לדף הבית
       </Link>
       <h1 className="font-display font-bold text-3xl mb-2">תנאי שימוש</h1>
-      <p className="text-muted text-sm mb-8">עודכן לאחרונה: מאי 2026</p>
+      <p className="text-muted text-sm mb-8">עודכן לאחרונה: אוגוסט 2026</p>
       <p className="text-foreground/80 mb-8">ברוכים הבאים לעד כאן (AdKan). השימוש באפליקציה מהווה הסכמה לתנאים הבאים.</p>
 
       <Section title="1. הגדרות">
@@ -21,7 +21,8 @@ export default function TermsPage() {
       </Section>
 
       <Section title="3. חשבון משתמש">
-        <p>הכניסה מתבצעת דרך Apple בלבד. אחריות אבטחת המכשיר וחשבון Apple שלכם היא שלכם.</p>
+        <p><strong>ב-iOS:</strong> הכניסה מתבצעת דרך Apple Sign-In. אחריות אבטחת המכשיר וחשבון Apple שלכם היא שלכם.</p>
+        <p><strong>ב-Android:</strong> הכניסה מתבצעת דרך Google Sign-In. אחריות אבטחת המכשיר וחשבון Google שלכם היא שלכם.</p>
       </Section>
 
       <Section title="4. שימוש מותר">
@@ -39,15 +40,17 @@ export default function TermsPage() {
       </Section>
 
       <Section title="5. תשלומים ומנוי">
+        <p><strong>iOS (דרך App Store):</strong></p>
         <ul>
           <li>מנוי חודשי: ₪7.90/חודש</li>
           <li>מנוי שנתי: ₪59.90/שנה</li>
           <li>רישיון לכל החיים: ₪99.90 חד-פעמי</li>
           <li>כל שלושת המנויים כוללים תקופת ניסיון של 3 ימים ללא חיוב</li>
-          <li>תשלומים מעובדים על ידי Apple דרך App Store</li>
+          <li>תשלומים מעובדים על ידי Apple דרך App Store (StoreKit 2)</li>
           <li>ביטול מנוי: דרך הגדרות Apple שלכם לפחות 24 שעות לפני חידוש אוטומטי</li>
           <li>לא מוצעים החזרים כספיים על תקופות שהחלו, אלא אם נדרש על פי חוק</li>
         </ul>
+        <p><strong>Android:</strong> תשלומים עדיין לא פעילים. בעתיד, יעברו דרך Google Play Billing.</p>
       </Section>
 
       <Section title="6. קניין רוחני">
